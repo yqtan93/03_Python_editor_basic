@@ -1,0 +1,26 @@
+# Ask user to input receiver's name
+receiver = input("Please insert the birthday person's name.")
+
+# Ask user to input birthday year for the receiver
+birth_year = int(input("Please insert the birth year of the person."))
+
+# Ask the user to input personalised birthday message
+message = input("Please insert your wishes to the birthday person.")
+
+# Ask user to input their name
+sender = input("Please enter your name.")
+
+# Calculate the age of the birthday person using current year
+import datetime as dt
+today = dt.date.today()
+this_year = int(today.strftime("%Y"))
+age = this_year - birth_year
+
+# Print full birthday message
+print(f"""{receiver}, let's celebrate your {age} years of awesomeness!
+Wishing you a day filled with joy and laughter as you turn {age}!
+
+{message}
+
+With love and best wishes,
+{sender}""")
